@@ -1,7 +1,7 @@
 import React from "react";
-import { createRandomSong } from "../data/index";
+import { createRandomSong } from "../../data/index";
 import { useDispatch, useSelector } from "react-redux";
-import { addSongs, removeSong } from "../store";
+import { addSongs, removeSong } from "../../store";
 
 function SongList() {
   const dispatch = useDispatch();
