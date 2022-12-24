@@ -19,6 +19,7 @@ function App() {
       <hr />
       <MovieList />
       <hr />
+      <br />
       <SongList />
     </div>
   );
