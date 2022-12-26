@@ -14,7 +14,7 @@ function UserNames({ user }) {
 
   const header = (
     <>
-      <div style={{ display: "flex", margin: "20px" }}>
+      <div key={user.id} style={{ display: "flex", margin: "20px" }}>
         <p
           style={{
             marginLeft: "5px",
