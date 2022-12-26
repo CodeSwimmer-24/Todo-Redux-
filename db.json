@@ -1,6 +1,10 @@
 {
   "data": [
     {
+      "name": "Fahad",
+      "id": 1
+    },
+    {
       "name": "Kelley Koepp",
       "id": "d6nagg_"
     },
@@ -29,6 +33,12 @@
       "id": "ijsyCCO"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Harry",
+      "userId": 1
+    }
+  ],
   "photos": []
 }
