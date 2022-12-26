@@ -1,26 +1,13 @@
-import { configureStore, createAction } from "@reduxjs/toolkit";
-import songSlice from "./slices/songSlice";
-import { addMovies, removeMovies, movieReducer } from "./slices/movieSlice";
-import { addSongs, removeSong, songReducer } from "./slices/songSlice";
-
-export const reset = createAction("app/reset");
+import { configureStore } from "@reduxjs/toolkit";
+import { userReducer } from "./albumSlice/albumSlice";
 
 const store = configureStore({
   reducer: {
-    songs: songReducer,
-    movies: movieReducer,
+    user: userReducer,
   },
 });
 
-// store.dispatch(
-//   type: "song/addSongs",
-//   payload: "New songs",
-//   songSlice.actions.addSongs("Payload change here")
-// );
-
-// const finalState = store.getState();
-// console.log(finalState);
-
 export { store };
-
-export { addMovies, removeMovies, addSongs, removeSong };
+export * from "./albumSlice/fetchUser";
+export * from "./albumSlice/postUser";
+export * from "./albumSlice/deleteUser";
