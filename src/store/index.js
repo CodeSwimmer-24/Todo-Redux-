@@ -22,4 +22,4 @@ export { store };
 export * from "./albumSlice/fetchUser";
 export * from "./albumSlice/postUser";
 export * from "./albumSlice/deleteUser";
-export { useFetchAlbumsQuery } from "./api/albumApi";
+export { useFetchAlbumsQuery, useAddAlbumMutation } from "./api/albumApi";
