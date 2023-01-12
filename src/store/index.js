@@ -15,11 +15,15 @@ const store = configureStore({
     return getDefaultMiddleware().concat(albumsApi.middleware);
   },
 });
-
+window.store = store;
 setupListeners(store.dispatch);
 
 export { store };
 export * from "./albumSlice/fetchUser";
 export * from "./albumSlice/postUser";
 export * from "./albumSlice/deleteUser";
-export { useFetchAlbumsQuery, useAddAlbumMutation } from "./api/albumApi";
+export {
+  useFetchAlbumsQuery,
+  useAddAlbumMutation,
+  useRemoveAlbumMutation,
+} from "./api/albumApi";
