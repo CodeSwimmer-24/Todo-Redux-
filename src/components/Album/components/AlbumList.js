@@ -1,12 +1,21 @@
 import React from "react";
-import { useFetchAlbumsQuery } from "../../../store";
+import {
+  useAddAlbumMutation,
+  useFetchAlbumsQuery,
+  useRemoveAlbumMutation,
+} from "../../../store";
 import ExportPannel from "./ExpandedPannel";
 
 function AlbumList({ user }) {
   const { isLoading, error, data } = useFetchAlbumsQuery(user);
   console.log(data);
+  const [addAlbum, result] = useAddAlbumMutation();
+  const [removeAlbum, removeAlbumResult] = useRemoveAlbumMutation();
+  console.log(result);
 
-  const handleClick = () => {};
+  const handleClick = () => {
+    addAlbum(user);
+  };
   //   console.log(data, error, isLoading);
 
   let content;
